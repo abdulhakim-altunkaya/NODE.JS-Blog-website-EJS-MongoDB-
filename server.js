@@ -6,7 +6,6 @@ const app = express();
 connectDB();
 
 app.set("view engine", "ejs");
-app.use(express.urlencoded{extended: true});
 app.use("/assets", express.static("static"));
 
 app.get("/", function(req, res){
