@@ -41,15 +41,11 @@ app.get("/contact", function(req, res){
 })
 
 app.post("/contact", function(req, res){
-  var details = req.body;
-  res.render("comment2", {personal_data: details});
+  console.log(req.body);
+  var details = req.body.then(function(){
+    res.render("comment2", {personal_data: details});
+  });
 });
-
-
-
-
-
-
 
 const server = app.listen(process.env.PORT || 5000);
 const portNumber = server.address().port;
