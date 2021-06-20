@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include("./partials/partial_2") %>
+  </head>
+  <body>
+    <%- include("./partials/partial_1") %>
+
+    <div class="new_main">
+      <form id="contact_form" action="/contact" method="post">
+        <label for="input1">Enter your name</label>
+        <input type="text" name="input1" id="input1" required>
+        <label for="input2">Enter your city</label>
+        <input type="text" name="input2" id="input2" required>
+        <button>Submit</button>
+      </form>
+    </div>
+
+
+  </body>
+</html>
