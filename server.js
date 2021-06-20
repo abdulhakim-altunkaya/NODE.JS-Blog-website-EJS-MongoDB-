@@ -36,6 +36,21 @@ app.get("/test", function(req, res){
   res.sendFile(path.join(__dirname, '/pages/test.html'));
 });
 
+app.get("/contact", function(req, res){
+  res.render("comment");
+})
+
+app.post("/contact", function(req, res){
+  var details = req.body;
+  res.render("comment2", {personal_data: details});
+});
+
+
+
+
+
+
+
 const server = app.listen(process.env.PORT || 5000);
 const portNumber = server.address().port;
 console.log("ПОРТ СЕИЧАС ОТКРЫТ "+portNumber);
