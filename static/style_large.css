@@ -61,13 +61,15 @@
     width: 80%;
     border: none;
     outline: none;
-    text-align: justify;
     line-height: 150%;
     box-shadow:
       0 -6px white,
       0 6px white,
       -15px 0 4px -3px #9ecaed,
       15px 0 4px -3px #9ecaed;
+  }
+  .new_main p {
+    text-align: justify;
   }
   .new_main h1 {
     line-height: 150%;
