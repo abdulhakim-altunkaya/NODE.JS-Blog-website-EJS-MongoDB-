@@ -1,0 +1,8 @@
+<div>
+  <% for (var key in personal_data) { %>
+    <div class="commentBox">
+      <span><strong><%= personal_data[key].input1 %></strong> from <strong><%= personal_data[key].input2 %></strong></span>
+      <p><%= personal_data[key].input3 %>***<%= personal_data[key].input4 %>&nbsp;<%= personal_data[key].input5 %>&nbsp;<%= personal_data[key].input6 %></p>
+    </div>
+  <% } %>
+</div>

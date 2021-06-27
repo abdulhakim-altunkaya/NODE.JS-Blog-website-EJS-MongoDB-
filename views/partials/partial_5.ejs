@@ -1,0 +1,40 @@
+<h2>COMMENTATORS HERE &#8681;</h2>
+<form id="contact_form" action="/contact" method="post">
+  <label for="input1">Enter your name and surname</label><br>
+  <input class="inputAreas" type="text" name="input1" id="input1" required><br>
+  <label for="input2">Enter your  city </label><br>
+  <input class="inputAreas" type="text" name="input2" id="input2" required><br>
+  <input name="input4" id="input4" style="display:none;">
+  <input name="input5" id="input5" style="display:none;">
+  <input name="input6" id="input6" style="display:none;">
+
+  <script type="text/javascript">
+    const fullDate = new Date();
+    /*GET DAY*/
+    const myDay = fullDate.getDate();
+    document.getElementById("input4").value = myDay;
+    /*GET MONTH*/
+    const month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    const myMonth = month[fullDate.getMonth()];
+    document.getElementById("input5").value = myMonth;
+    /*GET YEAR*/
+    const myYear = fullDate.getFullYear();
+    document.getElementById("input6").value = myYear;
+  </script>
+
+  <label for="input3">Write your comment please</label><br>
+  <textarea class="inputAreas" id="input3" name="input3" rows="5" cols="70" ></textarea><br>
+  <button id="commentButton">Submit</button>
+</form>

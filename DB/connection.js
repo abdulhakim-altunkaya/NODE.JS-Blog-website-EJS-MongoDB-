@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
 const url = "mongodb+srv://abdulhakim:seattle1@cluster0.j3afp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const connectionParams = {

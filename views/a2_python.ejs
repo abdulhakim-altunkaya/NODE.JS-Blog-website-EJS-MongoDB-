@@ -6,7 +6,44 @@
   <body>
     <%- include("./partials/partial_1") %>
     <div class="new_main">
-      <p>SIMPLE DIFFERENCE OF USING OR NOT USING CONSTRUCTORS IN PYTHON CLASSES</p>
+      <h1>SIMPLE DIFFERENCE BETWEEN USING A CONSTRUCTOR AND NOT USING A CONSTRUCTOR IN PYTHON 3</h1>
+      <h4>4 April 2021, Abdulhakim Altunkaya</h4>
+      <p>Hello everybody,<br><br>
+      In this article we will try to find the difference between using a constructor and not using a constructor in python classes. By doing this, we would be able to understand better why to use constructors.<br><br>
+      I am using python editor IDLE 3.9
+      </p>
+
+      <h2>OPTION 1 (WITHOUT CONSTRUCTOR 1):</h2>
+      <p>This option neither uses a constructor not a special method to access variable values. Variable values are our car information like number of wheels and doors. Variables we want to display are standing independently inside the class. In other words, variable names and variable values are standing independently inside the class</p><br>
+      <img src="/assets/article_images/article2_img1.png" alt="this is a article image">
+      <p>As you can see, we access our variables without using a method. This way of class creation is easier but not scalable, in other words, you cannot use it for lets say 100 cars. Because you will have to create 200 variables (100 for wheels, 100 for doors) inside the class and another 100 function calls to display their values. As you can judge, this way would be time-consuming and not nice looking and open to making mistakes. <br><br>
+      By the way, the result for above code block is:<br><br>
+      4 <br>
+      wroommmm
+      </p>
+
+      <h2>OPTION 2 (WITHOUT CONSTRUCTOR 2):</h2>
+      <p>This option will not use a constructor but a method to access variable values. Variable values we want to display are not standing independently. Their name are in method and their values are in function call.</p><br>
+      <img src="/assets/article_images/article2_img2.png" alt="this is a article image">
+      <p>As you can see, we access our variables by using a method. This way is scalable. For 100 cars, we don’t have create 200 variables.  We just give their values in our function calls.<br><br>
+      Result is:<br>
+      vroommmm2 <br>
+      4
+      </p>
+
+      <h2>OPTION 3 (WITH CONSTRUCTOR):</h2>
+      <p>This option will use a constructor to access variable values. Variable values we want to display are not standing independently. Their name are in method and their values are in Class call.</p><br>
+      <img src="/assets/article_images/article2_img3.png" alt="this is a article image">
+      <p>As you can see, we access our variables by using a constructor. This way is scalable. For 100 cars, we don’t have create 200 variables.  We just give their values in our Class calls.</p><br>
+      Result is:<br>
+      vrommmm3 <br>
+      4 <br>
+      <p>So, what is the difference between Option 2 and Option 3? Using a method or a using constructor? Constructors are also methods but they are special, they behave like class parameters. So, instead of calling function, you can call Class and it would give the same result. By doing this, we don’t have to write extra lines of code to call function.</p>
+      For now that’s all. <br>
+      Regards, Abdulhakim <br>
+      </p>
+      <%- include("./partials/partial_a2") %>
+      <%- include("./partials/partial_4") %>
     </div>
 
   </body>
