@@ -71,8 +71,15 @@
   .new_main p {
     text-align: justify;
   }
-  .new_main h1 {
-    line-height: 150%;
+  .new_main h1 h2 h3 {
+    line-height: 115%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .new_main img {
+     max-width:100%;
+     width:100%;
   }
 
   #logo-link {
@@ -221,6 +228,7 @@
     font-family: inherit;
     font-style: italic;
     font-size: inherit;
+    max-width: 100%;
 
   }
 
