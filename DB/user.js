@@ -24,7 +24,7 @@ const UserSchema = new Schema({
     type: String
   }
 });
-
+UserSchema.index({input1: 'text'});
 const A1Model = mongoose.model("a1comment", UserSchema);
 const A2Model = mongoose.model("a2comment", UserSchema);
 const A3Model = mongoose.model("a3comment", UserSchema);
