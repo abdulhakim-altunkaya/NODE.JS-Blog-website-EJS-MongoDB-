@@ -1,7 +1,7 @@
 const express  = require ("express");
 const path = require ("path");
 const connectDB = require ("./DB/connection");
-const { A1Model, A2Model, A3Model, A4Model, A5Model, UserModel } = require('./DB/user');
+const { A1Model, A2Model, A3Model, A4Model, A5Model, A6Model, UserModel } = require('./DB/user');
 const app = express();
 
 connectDB();
