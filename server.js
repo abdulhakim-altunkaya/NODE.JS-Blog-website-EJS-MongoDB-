@@ -211,6 +211,20 @@ app.post("/broken-image-nodejs", function(req, res, next){
   });
 });
 
+app.get("/select-submit", function(req, res, next){
+  A6Model.find({}).sort({_id:-1}).then(function(records){
+    res.render("a6_input_select", {personal_data: records})
+  }).catch(next);
+});
+
+app.post("/select-submit", function(req, res, next){
+  A6Model.create(req.body).then(function(){
+    A6Model.find({}).sort({_id:-1}).then(function(records){
+      res.render("a6_input_select", {personal_data: records})
+    }).catch(next);
+  });
+});
+
 
 
 const server = app.listen(process.env.PORT || 5000);

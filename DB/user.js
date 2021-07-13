@@ -30,7 +30,8 @@ const A2Model = mongoose.model("a2comment", UserSchema);
 const A3Model = mongoose.model("a3comment", UserSchema);
 const A4Model = mongoose.model("a4comment", UserSchema);
 const A5Model = mongoose.model("a5comment", UserSchema);
+const A6Model = mongoose.model("a6comment", UserSchema);
 const UserModel = mongoose.model("user", UserSchema);
 module.exports = {
-    A1Model, A2Model, A3Model, A4Model, A5Model, UserModel
+    A1Model, A2Model, A3Model, A4Model, A5Model, A6Model, UserModel
 }

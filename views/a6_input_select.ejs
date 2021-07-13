@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include("./partials/partial_2") %>
+  </head>
+  <body>
+    <%- include("./partials/partial_1") %>
+    <div class="new_main">
+      <h1>HOW TO FOCUS ON INPUT ELEMENT AND SELECT SUBMITTED VALUE AFTER FORM SUBMIT EVENT? (NODE.JS-EJS)</h1>
+      <h4>13 July 2021, Abdulhakim Altunkaya</h4>
+      <p>Hello everybody,<br><br>
+      <p>When you submit a form to a database (such as mongoDB), you realize the page reloading itself and input areas resetting themselves.This can be not user-friendly, as you might want users to easily insert a new value without using mouse again. You may see on the internet lots of solutions including preventDefault or ajaxloads which are complicated to integrate into your code. To fix this issue, we'll separate the solution into two parts.</p>
+      <h2>FOCUS AFTER SUBMIT</h2>
+      <p>Keeping Focus on the input field after submit is very easy. Just add "autofocus" as a attribute to your input element.</p>
+      <img src="/assets/article_images/article6_img1.png" alt="this is a article image" style="border: 2px solid red; border-radius: 20px;">
+
+      <h2>SELECT AFTER SUBMIT</h2>
+      <p>I am using node.js and ejs structure. Select effect can be done with 3 steps.</p>
+      <p>1. On server.js you shoould export user input as a dynamic data to your ejs file. </p>
+      <img src="/assets/article_images/article6_img2.png" alt="this is a article image" style="border: 2px solid red; border-radius: 20px;">
+      <p>2. On your new ejs file (it has to be a new ejs file), you'll have the same form but this time with a slightly different input element. It will have dynamic data. </p>
+      <img src="/assets/article_images/article6_img3.png" alt="this is a article image" style="border: 2px solid red; border-radius: 20px;">
+      <p>3. Then on the same new ejs file, open a script area, and code this:</p>
+      <img src="/assets/article_images/article6_img4.png" alt="this is a article image" style="border: 2px solid red; border-radius: 20px;">
+      <p>For now that’s all. <br>
+      Regards, Abdulhakim <br>
+      </p>
+      <%- include("./partials/partial_a6") %>
+      <%- include("./partials/partial_4") %>
+    </div>
+
+  </body>
+</html>
