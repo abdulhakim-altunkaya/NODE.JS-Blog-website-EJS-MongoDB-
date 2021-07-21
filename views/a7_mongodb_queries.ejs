@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include("./partials/partial_2") %>
+  </head>
+  <body>
+    <%- include("./partials/partial_1") %>
+    <div class="new_main">
+      <h1>HOW TO DETECT EMPTY/NULL RESULTS FROM MONGODB QUERIES? (BY USING NODE.JS)</h1>
+      <h4>19 July 2021, Abdulhakim Altunkaya</h4>
+      <p>Hello everybody,<br><br>
+      <p>After making a query(search) on mongodb database, you'll probably need to check your search result if it is empty/null or not. To do this, we will move with two examples.</p>
+
+      <h4>ORDINARY METHOD</h4>
+      <p>Ordinary method is the way which you do not use index-text-search method. You just need to use equality operator of javascript, and check if it is null or not.</p>
+      <img src="/assets/article_images/article7_img1.png" alt="this is a article image" style="border: 2px solid red; border-radius: 20px;">
+
+      <h4>INDEX-TEXT-SEARCH METHOD</h4>
+      <p>Sometimes we will be using this method for its advantages regarding exact phrase search, or better performance etc. In Index-text-search method, we need another way to check if query result is empty or not. As result is returned as an array, we need to check if array length is equal to 0.</p>
+      <img src="/assets/article_images/article7_img2.png" alt="this is a article image" style="border: 2px solid red; border-radius: 20px;"> <br><br>
+      <p>NOTE: if you wonder why word2 is weirdly formatting word1, it is because, we are making an exact search query. In other words, imagine word1 is holding value of "one lake", and if we do not format word1, then our search will bring results including "one" and "lake". But if we format it, then it will bring results including "one lake" not "one" and "lake". This is how we format another variable by using javascript template literals. And actually, it is a piece of fine coding what you see. Because on the internet, I do not think you will find this. I spent more than a day to construct this piece of code.</p>
+      <p>Thank you for reading<br>
+      Regards, Abdulhakim <br>
+      </p>
+      <%- include("./partials/partial_a7") %>
+      <%- include("./partials/partial_4") %>
+    </div>
+
+  </body>
+</html>

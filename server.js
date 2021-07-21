@@ -1,7 +1,7 @@
 const express  = require ("express");
 const path = require ("path");
 const connectDB = require ("./DB/connection");
-const { A1Model, A2Model, A3Model, A4Model, A5Model, A6Model, UserModel } = require('./DB/user');
+const { A1Model, A2Model, A3Model, A4Model, A5Model, A6Model, A7Model, UserModel } = require('./DB/user');
 const app = express();
 
 connectDB();
@@ -221,6 +221,20 @@ app.post("/select-submit", function(req, res, next){
   A6Model.create(req.body).then(function(){
     A6Model.find({}).sort({_id:-1}).then(function(records){
       res.render("a6_input_select", {personal_data: records})
+    }).catch(next);
+  });
+});
+
+
+app.get("/mongodb_empty_queries", function(req, res, next){
+  A7Model.find({}).sort({_id:-1}).then(function(records){
+    res.render("a7_mongodb_queries", {personal_data: records})
+  }).catch(next);
+});
+app.post("/mongodb_empty_queries", function(req, res, next){
+  A7Model.create(req.body).then(function(){
+    A7Model.find({}).sort({_id:-1}).then(function(records){
+      res.render("a7_mongodb_queries", {personal_data: records})
     }).catch(next);
   });
 });
